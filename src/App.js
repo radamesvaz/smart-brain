@@ -82,7 +82,7 @@ loadUser = (data) => {
 
   onButtonSubmit = () =>{
     this.setState({imageUrl: this.state.input});
-    fetch('https://sleepy-scrubland-26722.herokuapp.com/imageurl', {
+    fetch('https://smart-brain-api-rv.herokuapp.com/imageurl', {
       method: 'post',
       headers: {'Content-type': 'application/json'},
       body: JSON.stringify({
@@ -92,7 +92,7 @@ loadUser = (data) => {
   .then(response => response.json())
     .then(response => {
       if(response) {
-        fetch('https://sleepy-scrubland-26722.herokuapp.com/image', {
+        fetch('https://smart-brain-api-rv.herokuapp.com/image', {
           method: 'put',
           headers: {'Content-type': 'application/json'},
           body: JSON.stringify({
